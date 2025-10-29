@@ -134,10 +134,10 @@ export const Dashboard: React.FC = () => {
       {/* Header */}
       <div className="text-center py-6 px-4 bg-white shadow-sm">
         <h1 className="text-4xl font-bold text-gray-900 mb-2">
-          Email Signature Generator
+          PrismScale Email Signature Generator
         </h1>
         <p className="text-gray-600">
-          Create professional email signatures for Obelisk Consulting
+          Custom Email signature generator for Obelisk
         </p>
       </div>
 
