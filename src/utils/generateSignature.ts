@@ -211,7 +211,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
               style="
                 margin: 0;
                 padding: 12px 0 0 0;
-                font-size: 9px;
+                font-size: 10px;
                 line-height: 1.4;
                 color: #666666;
                 border-top: 1px solid #e0e0e0;

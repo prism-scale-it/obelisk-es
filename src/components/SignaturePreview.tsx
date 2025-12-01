@@ -251,7 +251,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
                         style={{
                           margin: 0,
                           padding: "12px 0 0 0",
-                          fontSize: "9px",
+                          fontSize: "11px",
                           lineHeight: 1.4,
                           color: "#666666",
                           borderTop: "1px solid #e0e0e0",
