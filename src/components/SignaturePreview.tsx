@@ -40,7 +40,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
               >
                 <tbody>
                   <tr>
-                    <td style={{ padding: "20px", verticalAlign: "top" }}>
+                    <td style={{ padding: "20px 20px 12px 20px", verticalAlign: "top" }}>
                       <table
                         cellPadding="0"
                         cellSpacing="0"
@@ -51,179 +51,190 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
                             {/* Logo */}
                             <td
                               style={{
-                                paddingRight: "30px",
                                 verticalAlign: "top",
-                                width: "229px",
+                                width: "235px",
                               }}
                             >
                               <img
                                 src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/logo-fill.png"
                                 alt="Obelisk Logo"
                                 style={{
-                                  minWidth: "235px",
+                                  width: "235px",
                                   height: "auto",
                                   display: "block",
-                                  width: "100%",
                                 }}
                               />
                             </td>
 
                             {/* Info */}
-                            <td style={{ verticalAlign: "top" }}>
-                              {/* Name */}
-                              <p
+                            <td
+                              style={{
+                                verticalAlign: "top",
+                                width: "auto",
+                                textAlign: "right",
+                              }}
+                            >
+                              <div
                                 style={{
-                                  margin: "0 0 4px 0",
-                                  fontSize: "28px",
-                                  fontWeight: 700,
-                                  color: "#e35336",
-                                  lineHeight: 1.2,
+                                  display: "inline-block",
+                                  textAlign: "left",
                                 }}
                               >
-                                {fullName || "Your Name"}
-                              </p>
-
-                              {/* Title */}
-                              <p
-                                style={{
-                                  margin: "0 0 8px 0",
-                                  fontSize: "18px",
-                                  fontWeight: 400,
-                                  color: "#000000",
-                                  lineHeight: 1.3,
-                                }}
-                              >
-                                {data.position || "Position"}
-                              </p>
-
-                              {/* Divider */}
-                              <hr
-                                style={{
-                                  border: "none",
-                                  borderTop: "1px solid #000000",
-                                  margin: "0 0 8px 0",
-                                  width: "263px",
-                                }}
-                              />
-
-                              {/* Contact */}
-                              <p
-                                style={{
-                                  margin: "0 0 6px 0",
-                                  fontSize: "17px",
-                                  whiteSpace: "nowrap",
-                                  lineHeight: 1.3,
-                                }}
-                              >
-                                <a
-                                  href={`mailto:${data.email}`}
+                                {/* Name */}
+                                <p
                                   style={{
-                                    color: "#000000",
-                                    textDecoration: "none",
+                                    margin: "0 0 4px 0",
+                                    fontSize: "28px",
+                                    fontWeight: 700,
+                                    color: "#e35336",
+                                    lineHeight: 1.2,
                                   }}
                                 >
-                                  {data.email || "email@obelisk.au"}
-                                </a>
-                                &nbsp;|&nbsp;
-                                <a
-                                  href={`tel:${countryCodeData?.dialCode}${data.phoneNumber}`}
+                                  {fullName || "Your Name"}
+                                </p>
+
+                                {/* Title */}
+                                <p
                                   style={{
+                                    margin: "0 0 8px 0",
+                                    fontSize: "18px",
+                                    fontWeight: 400,
                                     color: "#000000",
-                                    textDecoration: "none",
+                                    lineHeight: 1.3,
                                   }}
                                 >
-                                  {fullPhoneNumber || "+61 XXX XXX XXX"}
-                                </a>
-                              </p>
+                                  {data.position || "Position"}
+                                </p>
 
-                              <p
-                                style={{
-                                  margin: "0 0 12px 0",
-                                  fontSize: "17px",
-                                  whiteSpace: "nowrap",
-                                  lineHeight: 1.3,
-                                }}
-                              >
-                                <a
-                                  href="https://maps.app.goo.gl/p5wjb2cD8tkoABTV9"
+                                {/* Divider */}
+                                <hr
                                   style={{
-                                    color: "#000000",
-                                    textDecoration: "none",
+                                    border: "none",
+                                    borderTop: "1px solid #000000",
+                                    margin: "0 0 8px 0",
+                                    width: "263px",
                                   }}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                >
-                                  {data.address || "Address"}
-                                </a>
-                              </p>
+                                />
 
-                              {/* Social Icons */}
-                              <table
-                                cellPadding="0"
-                                cellSpacing="0"
-                                style={{ margin: 0 }}
-                              >
-                                <tbody>
-                                  <tr>
-                                    <td>
-                                      <a
-                                        href="https://www.linkedin.com/company/obeliskconsulting/"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                      >
-                                        <img
-                                          src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/linkedin.png"
-                                          alt="LinkedIn"
-                                          width="34"
-                                          height="34"
-                                        />
-                                      </a>
-                                    </td>
-                                    <td style={{ paddingLeft: "8px" }}>
-                                      <a
-                                        href={`mailto:${data.email}`}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                      >
-                                        <img
-                                          src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/email.png"
-                                          alt="Email"
-                                          width="34"
-                                          height="34"
-                                        />
-                                      </a>
-                                    </td>
-                                    <td style={{ paddingLeft: "8px" }}>
-                                      <a
-                                        href="https://www.instagram.com/___obelisk___/"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                      >
-                                        <img
-                                          src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/insta.png"
-                                          alt="Instagram"
-                                          width="34"
-                                          height="34"
-                                        />
-                                      </a>
-                                    </td>
-                                    <td style={{ paddingLeft: "8px" }}>
-                                      <a
-                                        href="https://obelisk-consulting.com/"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                      >
-                                        <img
-                                          src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/website+(2).png"
-                                          alt="Website"
-                                          width="34"
-                                          height="34"
-                                        />
-                                      </a>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
+                                {/* Contact */}
+                                <p
+                                  style={{
+                                    margin: "0 0 6px 0",
+                                    fontSize: "17px",
+                                    whiteSpace: "nowrap",
+                                    lineHeight: 1.3,
+                                  }}
+                                >
+                                  <a
+                                    href={`mailto:${data.email}`}
+                                    style={{
+                                      color: "#000000",
+                                      textDecoration: "none",
+                                    }}
+                                  >
+                                    {data.email || "email@obelisk.au"}
+                                  </a>
+                                  &nbsp;|&nbsp;
+                                  <a
+                                    href={`tel:${countryCodeData?.dialCode}${data.phoneNumber}`}
+                                    style={{
+                                      color: "#000000",
+                                      textDecoration: "none",
+                                    }}
+                                  >
+                                    {fullPhoneNumber || "+61 XXX XXX XXX"}
+                                  </a>
+                                </p>
+
+                                <p
+                                  style={{
+                                    margin: "0 0 12px 0",
+                                    fontSize: "17px",
+                                    whiteSpace: "nowrap",
+                                    lineHeight: 1.3,
+                                  }}
+                                >
+                                  <a
+                                    href="https://maps.app.goo.gl/p5wjb2cD8tkoABTV9"
+                                    style={{
+                                      color: "#000000",
+                                      textDecoration: "none",
+                                    }}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  >
+                                    {data.address || "Address"}
+                                  </a>
+                                </p>
+
+                                {/* Social Icons */}
+                                <table
+                                  cellPadding="0"
+                                  cellSpacing="0"
+                                  style={{ margin: 0 }}
+                                >
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <a
+                                          href="https://www.linkedin.com/company/obeliskconsulting/"
+                                          target="_blank"
+                                          rel="noreferrer"
+                                        >
+                                          <img
+                                            src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/linkedin.png"
+                                            alt="LinkedIn"
+                                            width="34"
+                                            height="34"
+                                          />
+                                        </a>
+                                      </td>
+                                      <td style={{ paddingLeft: "8px" }}>
+                                        <a
+                                          href={`mailto:${data.email}`}
+                                          target="_blank"
+                                          rel="noreferrer"
+                                        >
+                                          <img
+                                            src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/email.png"
+                                            alt="Email"
+                                            width="34"
+                                            height="34"
+                                          />
+                                        </a>
+                                      </td>
+                                      <td style={{ paddingLeft: "8px" }}>
+                                        <a
+                                          href="https://www.instagram.com/___obelisk___/"
+                                          target="_blank"
+                                          rel="noreferrer"
+                                        >
+                                          <img
+                                            src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/insta.png"
+                                            alt="Instagram"
+                                            width="34"
+                                            height="34"
+                                          />
+                                        </a>
+                                      </td>
+                                      <td style={{ paddingLeft: "8px" }}>
+                                        <a
+                                          href="https://obelisk-consulting.com/"
+                                          target="_blank"
+                                          rel="noreferrer"
+                                        >
+                                          <img
+                                            src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/website+(2).png"
+                                            alt="Website"
+                                            width="34"
+                                            height="34"
+                                          />
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
                             </td>
                           </tr>
                         </tbody>

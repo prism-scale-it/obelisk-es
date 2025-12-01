@@ -37,27 +37,27 @@ export const generateEmailSignature = (data: SignatureData): string => {
         bgcolor="#ffffff"
       >
         <tr>
-          <td style="padding: 20px; vertical-align: top">
+          <td style="padding: 20px 20px 12px 20px; vertical-align: top">
             <table cellpadding="0" cellspacing="0" border="0" width="100%">
               <tr>
                 <!-- Logo -->
                 <td
-                  style="padding-right: 30px; vertical-align: top; width: 229px"
+                  style="vertical-align: top; width: 235px"
                 >
                   <img
                     src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/logo-fill.png"
                     alt="Obelisk Logo"
                     style="
-                      min-width: 235px;
+                      width: 235px;
                       height: auto;
                       display: block;
-                      width: 100%;
                     "
                   />
                 </td>
 
                 <!-- Info -->
-                <td style="vertical-align: top">
+                <td style="vertical-align: top; width: auto; text-align: right">
+                  <div style="display: inline-block; text-align: left">
                   <!-- Name -->
                   <p
                     style="
@@ -184,6 +184,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                       </td>
                     </tr>
                   </table>
+                  </div>
                 </td>
               </tr>
             </table>
