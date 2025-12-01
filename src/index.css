@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Aptos";
+  src: url("/Aptos.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

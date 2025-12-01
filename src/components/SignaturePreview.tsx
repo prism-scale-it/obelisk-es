@@ -32,11 +32,10 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
                 style={{
                   fontFamily: "Arial, Helvetica, sans-serif",
                   color: "#061944",
-                  lineHeight: 1.4,
+                  lineHeight: 1.3,
                   borderCollapse: "collapse",
                   backgroundColor: "#ffffff",
                   width: "600px",
-                  minHeight: "200px",
                 }}
               >
                 <tbody>
@@ -74,10 +73,11 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
                               {/* Name */}
                               <p
                                 style={{
-                                  margin: 0,
+                                  margin: "0 0 4px 0",
                                   fontSize: "28px",
                                   fontWeight: 700,
                                   color: "#e35336",
+                                  lineHeight: 1.2,
                                 }}
                               >
                                 {fullName || "Your Name"}
@@ -86,10 +86,11 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
                               {/* Title */}
                               <p
                                 style={{
-                                  margin: 0,
+                                  margin: "0 0 8px 0",
                                   fontSize: "18px",
                                   fontWeight: 400,
                                   color: "#000000",
+                                  lineHeight: 1.3,
                                 }}
                               >
                                 {data.position || "Position"}
@@ -100,7 +101,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
                                 style={{
                                   border: "none",
                                   borderTop: "1px solid #000000",
-                                  margin: "8px 0",
+                                  margin: "0 0 8px 0",
                                   width: "263px",
                                 }}
                               />
@@ -108,9 +109,10 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
                               {/* Contact */}
                               <p
                                 style={{
-                                  margin: 0,
+                                  margin: "0 0 6px 0",
                                   fontSize: "17px",
                                   whiteSpace: "nowrap",
+                                  lineHeight: 1.3,
                                 }}
                               >
                                 <a
@@ -136,10 +138,10 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
 
                               <p
                                 style={{
-                                  margin: 0,
+                                  margin: "0 0 12px 0",
                                   fontSize: "17px",
                                   whiteSpace: "nowrap",
-                                  lineHeight: 2,
+                                  lineHeight: 1.3,
                                 }}
                               >
                                 <a
@@ -159,7 +161,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
                               <table
                                 cellPadding="0"
                                 cellSpacing="0"
-                                style={{ marginTop: "12px" }}
+                                style={{ margin: 0 }}
                               >
                                 <tbody>
                                   <tr>
@@ -226,6 +228,49 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
                           </tr>
                         </tbody>
                       </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              {/* DISCLAIMER */}
+              <table
+                cellPadding="0"
+                cellSpacing="0"
+                style={{
+                  fontFamily: "Aptos, Arial, Helvetica, sans-serif",
+                  backgroundColor: "#ffffff",
+                  borderCollapse: "collapse",
+                  width: "600px",
+                }}
+              >
+                <tbody>
+                  <tr>
+                    <td style={{ padding: "0 20px 20px 20px" }}>
+                      <p
+                        style={{
+                          margin: 0,
+                          padding: "12px 0 0 0",
+                          fontSize: "9px",
+                          lineHeight: 1.4,
+                          color: "#666666",
+                          borderTop: "1px solid #e0e0e0",
+                          textAlign: "justify",
+                        }}
+                      >
+                        <strong>Disclaimer:</strong> This e-mail, including any
+                        attachment(s) hereto, is intended only for the
+                        individual or entity to whom it is addressed. It may
+                        contain proprietary, confidential or privileged
+                        information or attorney work product belonging to
+                        Obelisk or its affiliates. If you are not the intended
+                        recipient of this e-mail, or if you have otherwise
+                        received this e-mail in error, please immediately notify
+                        the sender via return e-mail and permanently delete the
+                        original mail, any print outs and any copies, including
+                        any attachments. All e-mails sent from or to Obelisk may
+                        be subject to our monitoring and recording procedures.
+                      </p>
                     </td>
                   </tr>
                 </tbody>

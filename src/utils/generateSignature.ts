@@ -21,17 +21,16 @@ export const generateEmailSignature = (data: SignatureData): string => {
 >
   <tr>
     <td style="padding: 0; text-align: left" bgcolor="#ffffff">
-      <!-- START SIGNATURE - Select from here -->
+      <!-- START SIGNATURE -->
       <table
         cellpadding="0"
         cellspacing="0"
         border="0"
         width="600"
-        height="200"
         style="
           font-family: Arial, Helvetica, sans-serif;
           color: #061944;
-          line-height: 1.4;
+          line-height: 1.3;
           border-collapse: collapse;
           background-color: #ffffff;
         "
@@ -62,10 +61,11 @@ export const generateEmailSignature = (data: SignatureData): string => {
                   <!-- Name -->
                   <p
                     style="
-                      margin: 0;
+                      margin: 0 0 4px 0;
                       font-size: 28px;
                       font-weight: 700;
                       color: #e35336;
+                      line-height: 1.2;
                     "
                   >
                     ${fullName}
@@ -74,10 +74,11 @@ export const generateEmailSignature = (data: SignatureData): string => {
                   <!-- Title -->
                   <p
                     style="
-                      margin: 0;
+                      margin: 0 0 8px 0;
                       font-size: 18px;
                       font-weight: 400;
                       color: #000000;
+                      line-height: 1.3;
                     "
                   >
                     ${data.position}
@@ -88,13 +89,13 @@ export const generateEmailSignature = (data: SignatureData): string => {
                     style="
                       border: none;
                       border-top: 1px solid #000000;
-                      margin: 8px 0;
+                      margin: 0 0 8px 0;
                       width: 263px;
                     "
                   />
 
                   <!-- Contact -->
-                  <p style="margin: 0; font-size: 17px; white-space: nowrap">
+                  <p style="margin: 0 0 6px 0; font-size: 17px; white-space: nowrap; line-height: 1.3">
                     <a
                       href="mailto:${data.email}"
                       style="color: #000000; text-decoration: none"
@@ -110,10 +111,10 @@ export const generateEmailSignature = (data: SignatureData): string => {
 
                   <p
                     style="
-                      margin: 0;
+                      margin: 0 0 12px 0;
                       font-size: 17px;
                       white-space: nowrap;
-                      line-height: 2;
+                      line-height: 1.3;
                     "
                   >
                     <a
@@ -129,7 +130,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                     cellpadding="0"
                     cellspacing="0"
                     border="0"
-                    style="margin-top: 12px"
+                    style="margin: 0"
                   >
                     <tr>
                       <td>
@@ -190,6 +191,39 @@ export const generateEmailSignature = (data: SignatureData): string => {
         </tr>
       </table>
       <!-- END SIGNATURE -->
+      
+      <!-- DISCLAIMER -->
+      <table
+        cellpadding="0"
+        cellspacing="0"
+        border="0"
+        width="600"
+        style="
+          font-family: Aptos, Arial, Helvetica, sans-serif;
+          background-color: #ffffff;
+          border-collapse: collapse;
+        "
+        bgcolor="#ffffff"
+      >
+        <tr>
+          <td style="padding: 0 20px 20px 20px">
+            <p
+              style="
+                margin: 0;
+                padding: 12px 0 0 0;
+                font-size: 9px;
+                line-height: 1.4;
+                color: #666666;
+                border-top: 1px solid #e0e0e0;
+                text-align: justify;
+              "
+            >
+              <strong>Disclaimer:</strong> This e-mail, including any attachment(s) hereto, is intended only for the individual or entity to whom it is addressed. It may contain proprietary, confidential or privileged information or attorney work product belonging to Obelisk or its affiliates. If you are not the intended recipient of this e-mail, or if you have otherwise received this e-mail in error, please immediately notify the sender via return e-mail and permanently delete the original mail, any print outs and any copies, including any attachments. All e-mails sent from or to Obelisk may be subject to our monitoring and recording procedures.
+            </p>
+          </td>
+        </tr>
+      </table>
+      <!-- END DISCLAIMER -->
     </td>
   </tr>
 </table>`;
