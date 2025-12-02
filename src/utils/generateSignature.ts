@@ -134,6 +134,29 @@ export const generateEmailSignature = (data: SignatureData): string => {
                   >
                     <tr>
                       <td>
+                        <a href="mailto:${data.email}" target="_blank">
+                          <img
+                            src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/email.png"
+                            alt="Email"
+                            width="34"
+                            height="34"
+                          />
+                        </a>
+                      </td>
+                      <td style="padding-left: 8px">
+                        <a
+                          href="https://obelisk-consulting.com/"
+                          target="_blank"
+                        >
+                          <img
+                            src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/website+(2).png"
+                            alt="Website"
+                            width="34"
+                            height="34"
+                          />
+                        </a>
+                      </td>
+                      <td style="padding-left: 8px">
                         <a
                           href="https://www.linkedin.com/company/obeliskconsulting/"
                           target="_blank"
@@ -141,16 +164,6 @@ export const generateEmailSignature = (data: SignatureData): string => {
                           <img
                             src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/linkedin.png"
                             alt="LinkedIn"
-                            width="34"
-                            height="34"
-                          />
-                        </a>
-                      </td>
-                      <td style="padding-left: 8px">
-                        <a href="mailto:${data.email}" target="_blank">
-                          <img
-                            src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/email.png"
-                            alt="Email"
                             width="34"
                             height="34"
                           />
@@ -171,12 +184,12 @@ export const generateEmailSignature = (data: SignatureData): string => {
                       </td>
                       <td style="padding-left: 8px">
                         <a
-                          href="https://obelisk-consulting.com/"
+                          href="https://www.facebook.com/ObeliskConsulting"
                           target="_blank"
                         >
                           <img
-                            src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/website+(2).png"
-                            alt="Website"
+                            src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/new-assets/facebook.svg"
+                            alt="Facebook"
                             width="34"
                             height="34"
                           />
@@ -363,6 +376,29 @@ export const generateEmailSignatureDark = (data: SignatureData): string => {
                   >
                     <tr>
                       <td>
+                        <a href="mailto:${data.email}" target="_blank">
+                          <img
+                            src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/email.png"
+                            alt="Email"
+                            width="34"
+                            height="34"
+                          />
+                        </a>
+                      </td>
+                      <td style="padding-left: 8px">
+                        <a
+                          href="https://obelisk-consulting.com/"
+                          target="_blank"
+                        >
+                          <img
+                            src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/website+(2).png"
+                            alt="Website"
+                            width="34"
+                            height="34"
+                          />
+                        </a>
+                      </td>
+                      <td style="padding-left: 8px">
                         <a
                           href="https://www.linkedin.com/company/obeliskconsulting/"
                           target="_blank"
@@ -370,16 +406,6 @@ export const generateEmailSignatureDark = (data: SignatureData): string => {
                           <img
                             src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/linkedin.png"
                             alt="LinkedIn"
-                            width="34"
-                            height="34"
-                          />
-                        </a>
-                      </td>
-                      <td style="padding-left: 8px">
-                        <a href="mailto:${data.email}" target="_blank">
-                          <img
-                            src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/email.png"
-                            alt="Email"
                             width="34"
                             height="34"
                           />
@@ -400,12 +426,12 @@ export const generateEmailSignatureDark = (data: SignatureData): string => {
                       </td>
                       <td style="padding-left: 8px">
                         <a
-                          href="https://obelisk-consulting.com/"
+                          href="https://www.facebook.com/ObeliskConsulting"
                           target="_blank"
                         >
                           <img
-                            src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/website+(2).png"
-                            alt="Website"
+                            src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/new-assets/facebook.svg"
+                            alt="Facebook"
                             width="34"
                             height="34"
                           />
