@@ -11,6 +11,7 @@ interface PhoneInputProps {
   countryCode: "AU" | "IN";
   onCountryCodeChange: (code: "AU" | "IN") => void;
   countryCodeOptions: CountryCodeOption[];
+  isDarkMode?: boolean;
 }
 
 export const PhoneInput: React.FC<PhoneInputProps> = ({
@@ -23,6 +24,7 @@ export const PhoneInput: React.FC<PhoneInputProps> = ({
   countryCode,
   onCountryCodeChange,
   countryCodeOptions,
+  isDarkMode = false,
 }) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
@@ -51,14 +53,22 @@ export const PhoneInput: React.FC<PhoneInputProps> = ({
 
   return (
     <div className="mb-4">
-      <label className="block text-sm font-medium text-gray-700 mb-1">
+      <label
+        className={`block text-sm font-medium mb-1 ${
+          isDarkMode ? "text-gray-200" : "text-gray-700"
+        }`}
+      >
         {label} {required && <span className="text-red-500">*</span>}
       </label>
       <div className="flex gap-2">
         <select
           value={countryCode}
           onChange={(e) => onCountryCodeChange(e.target.value as "AU" | "IN")}
-          className="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+          className={`px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+            isDarkMode
+              ? "border-gray-600 bg-gray-700 text-white"
+              : "border-gray-300 bg-white"
+          }`}
         >
           {countryCodeOptions.map((option) => (
             <option key={option.code} value={option.code}>
@@ -72,12 +82,20 @@ export const PhoneInput: React.FC<PhoneInputProps> = ({
           onChange={handleChange}
           placeholder={placeholder}
           className={`flex-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-            error ? "border-red-500" : "border-gray-300"
+            error
+              ? "border-red-500"
+              : isDarkMode
+              ? "border-gray-600 bg-gray-700 text-white"
+              : "border-gray-300"
           }`}
         />
       </div>
       {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
-      <p className="text-gray-500 text-xs mt-1">
+      <p
+        className={`text-xs mt-1 ${
+          isDarkMode ? "text-gray-400" : "text-gray-500"
+        }`}
+      >
         {countryCode === "AU" ? "9 digits required" : "10 digits required"}
       </p>
     </div>

@@ -7,6 +7,7 @@ interface EmailInputProps {
   error?: string;
   required?: boolean;
   placeholder?: string;
+  isDarkMode?: boolean;
 }
 
 export const EmailInput: React.FC<EmailInputProps> = ({
@@ -16,10 +17,15 @@ export const EmailInput: React.FC<EmailInputProps> = ({
   error,
   required = false,
   placeholder,
+  isDarkMode = false,
 }) => {
   return (
     <div className="mb-4">
-      <label className="block text-sm font-medium text-gray-700 mb-1">
+      <label
+        className={`block text-sm font-medium mb-1 ${
+          isDarkMode ? "text-gray-200" : "text-gray-700"
+        }`}
+      >
         {label} {required && <span className="text-red-500">*</span>}
       </label>
       <div className="flex items-center">
@@ -29,10 +35,20 @@ export const EmailInput: React.FC<EmailInputProps> = ({
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
           className={`flex-1 px-3 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-            error ? "border-red-500" : "border-gray-300"
+            error
+              ? "border-red-500"
+              : isDarkMode
+              ? "border-gray-600 bg-gray-700 text-white"
+              : "border-gray-300 bg-white"
           }`}
         />
-        <span className="px-4 py-2 bg-gray-100 border border-l-0 border-gray-300 rounded-r-lg text-gray-700 font-medium">
+        <span
+          className={`px-4 py-2 border border-l-0 rounded-r-lg font-medium ${
+            isDarkMode
+              ? "bg-gray-700 border-gray-600 text-gray-200"
+              : "bg-gray-100 border-gray-300 text-gray-700"
+          }`}
+        >
           @obelisk.au
         </span>
       </div>

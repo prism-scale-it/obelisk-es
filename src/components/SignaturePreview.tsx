@@ -4,9 +4,13 @@ import { COUNTRY_CODES } from "../types";
 
 interface SignaturePreviewProps {
   data: SignatureData;
+  isDarkMode?: boolean;
 }
 
-export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
+export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
+  data,
+  isDarkMode = false,
+}) => {
   const fullName = data.middleName
     ? `${data.firstName} ${data.middleName} ${data.lastName}`
     : `${data.firstName} ${data.lastName}`;
@@ -16,12 +20,18 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
   );
   const fullPhoneNumber = `${countryCodeData?.dialCode} ${data.phoneNumber}`;
 
+  const bgColor = isDarkMode ? "#1a1a1a" : "#ffffff";
+  const textColor = isDarkMode ? "#e5e5e5" : "#000000";
+  const dividerColor = isDarkMode ? "#e5e5e5" : "#000000";
+  const disclaimerTextColor = isDarkMode ? "#a1a1a1" : "#666666";
+  const disclaimerBorderColor = isDarkMode ? "#404040" : "#e0e0e0";
+
   return (
     <div className="border-2 border-gray-300 rounded-lg p-4 bg-white">
       <table
         cellPadding="0"
         cellSpacing="0"
-        style={{ width: "600px", backgroundColor: "#ffffff" }}
+        style={{ width: "600px", backgroundColor: bgColor }}
       >
         <tbody>
           <tr>
@@ -31,16 +41,21 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
                 cellSpacing="0"
                 style={{
                   fontFamily: "Arial, Helvetica, sans-serif",
-                  color: "#061944",
+                  color: textColor,
                   lineHeight: 1.3,
                   borderCollapse: "collapse",
-                  backgroundColor: "#ffffff",
+                  backgroundColor: bgColor,
                   width: "600px",
                 }}
               >
                 <tbody>
                   <tr>
-                    <td style={{ padding: "20px 20px 12px 20px", verticalAlign: "top" }}>
+                    <td
+                      style={{
+                        padding: "20px 20px 12px 20px",
+                        verticalAlign: "top",
+                      }}
+                    >
                       <table
                         cellPadding="0"
                         cellSpacing="0"
@@ -99,7 +114,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
                                     margin: "0 0 8px 0",
                                     fontSize: "18px",
                                     fontWeight: 400,
-                                    color: "#000000",
+                                    color: textColor,
                                     lineHeight: 1.3,
                                   }}
                                 >
@@ -110,7 +125,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
                                 <hr
                                   style={{
                                     border: "none",
-                                    borderTop: "1px solid #000000",
+                                    borderTop: `1px solid ${dividerColor}`,
                                     margin: "0 0 8px 0",
                                     width: "263px",
                                   }}
@@ -128,7 +143,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
                                   <a
                                     href={`mailto:${data.email}`}
                                     style={{
-                                      color: "#000000",
+                                      color: textColor,
                                       textDecoration: "none",
                                     }}
                                   >
@@ -138,7 +153,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
                                   <a
                                     href={`tel:${countryCodeData?.dialCode}${data.phoneNumber}`}
                                     style={{
-                                      color: "#000000",
+                                      color: textColor,
                                       textDecoration: "none",
                                     }}
                                   >
@@ -157,7 +172,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
                                   <a
                                     href="https://maps.app.goo.gl/p5wjb2cD8tkoABTV9"
                                     style={{
-                                      color: "#000000",
+                                      color: textColor,
                                       textDecoration: "none",
                                     }}
                                     target="_blank"
@@ -250,7 +265,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
                 cellSpacing="0"
                 style={{
                   fontFamily: "Aptos, Arial, Helvetica, sans-serif",
-                  backgroundColor: "#ffffff",
+                  backgroundColor: bgColor,
                   borderCollapse: "collapse",
                   width: "600px",
                 }}
@@ -264,8 +279,8 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
                           padding: "12px 0 0 0",
                           fontSize: "11px",
                           lineHeight: 1.4,
-                          color: "#666666",
-                          borderTop: "1px solid #e0e0e0",
+                          color: disclaimerTextColor,
+                          borderTop: `1px solid ${disclaimerBorderColor}`,
                           textAlign: "justify",
                         }}
                       >
