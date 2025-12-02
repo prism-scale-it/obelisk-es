@@ -248,7 +248,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
                                       </td>
                                       <td style={{ paddingLeft: "8px" }}>
                                         <a
-                                          href="https://www.facebook.com/ObeliskConsulting"
+                                          href="https://www.facebook.com/share/1TJoc5JkVF/?mibextid=wwXIfr"
                                           target="_blank"
                                           rel="noreferrer"
                                         >

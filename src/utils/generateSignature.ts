@@ -184,7 +184,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                       </td>
                       <td style="padding-left: 8px">
                         <a
-                          href="https://www.facebook.com/ObeliskConsulting"
+                          href="https://www.facebook.com/share/1TJoc5JkVF/?mibextid=wwXIfr"
                           target="_blank"
                         >
                           <img
@@ -426,7 +426,7 @@ export const generateEmailSignatureDark = (data: SignatureData): string => {
                       </td>
                       <td style="padding-left: 8px">
                         <a
-                          href="https://www.facebook.com/ObeliskConsulting"
+                          href="https://www.facebook.com/share/1TJoc5JkVF/?mibextid=wwXIfr"
                           target="_blank"
                         >
                           <img
