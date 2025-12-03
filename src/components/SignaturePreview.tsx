@@ -30,7 +30,13 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
     : "https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/logo-fill.png";
 
   return (
-    <div className={`border-2 rounded-lg p-4 ${isDarkMode ? 'border-gray-600 bg-gray-900' : 'border-gray-300 bg-gray-50'}`}>
+    <div
+      className={`border-2 rounded-lg p-4 ${
+        isDarkMode
+          ? "border-gray-600 bg-gray-900"
+          : "border-gray-300 bg-gray-50"
+      }`}
+    >
       <table
         cellPadding="0"
         cellSpacing="0"
