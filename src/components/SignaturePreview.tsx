@@ -25,9 +25,12 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
   const dividerColor = isDarkMode ? "#e5e5e5" : "#000000";
   const disclaimerTextColor = isDarkMode ? "#a1a1a1" : "#666666";
   const disclaimerBorderColor = isDarkMode ? "#404040" : "#e0e0e0";
+  const logoSrc = isDarkMode
+    ? "https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/new-assets/logo-darkmode.png"
+    : "https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/logo-fill.png";
 
   return (
-    <div className="border-2 border-gray-300 rounded-lg p-4 bg-white">
+    <div className={`border-2 rounded-lg p-4 ${isDarkMode ? 'border-gray-600 bg-gray-900' : 'border-gray-300 bg-gray-50'}`}>
       <table
         cellPadding="0"
         cellSpacing="0"
@@ -71,7 +74,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
                               }}
                             >
                               <img
-                                src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/logo-fill.png"
+                                src={logoSrc}
                                 alt="Obelisk Logo"
                                 style={{
                                   width: "235px",

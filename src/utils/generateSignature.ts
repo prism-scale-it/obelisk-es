@@ -287,7 +287,7 @@ export const generateEmailSignatureDark = (data: SignatureData): string => {
                   style="vertical-align: top; width: 235px"
                 >
                   <img
-                    src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/logo-fill.png"
+                    src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/new-assets/logo-darkmode.png"
                     alt="Obelisk Logo"
                     style="
                       width: 235px;
