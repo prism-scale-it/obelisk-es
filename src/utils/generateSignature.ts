@@ -21,7 +21,7 @@ export const generateEmailSignature = (
   const disclaimerTextColor = isDarkMode ? "#a1a1a1" : "#666666";
   const disclaimerBorderColor = isDarkMode ? "#404040" : "#e0e0e0";
   const logoSrc =
-    "https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/new-assets/logo-fill.png";
+    "https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/new-assets/logo-with-stroke.png";
 
   return `<!-- ${isDarkMode ? "Dark" : "White"} background -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
