@@ -20,13 +20,13 @@ export const generateEmailSignature = (
   const dividerColor = isDarkMode ? "#e5e5e5" : "#000000";
   const disclaimerTextColor = isDarkMode ? "#a1a1a1" : "#666666";
   const disclaimerBorderColor = isDarkMode ? "#404040" : "#e0e0e0";
-  const logoSrc = isDarkMode
-    ? "https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/new-assets/logo-darkmode.png"
-    : "https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/logo-fill.png";
+  const logoSrc =
+    "https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/new-assets/logo-fill.png";
 
   return `<!-- ${isDarkMode ? "Dark" : "White"} background -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+  /* Mobile responsive styles */
   @media only screen and (max-width: 600px) {
     .signature-table { width: 100% !important; max-width: 600px !important; }
     .signature-content { padding: 15px !important; }
@@ -39,6 +39,14 @@ export const generateEmailSignature = (
     .contact-text { font-size: 15px !important; white-space: normal !important; }
     .divider { width: 100% !important; max-width: 250px !important; margin-left: auto !important; margin-right: auto !important; }
     .disclaimer-text { font-size: 9px !important; }
+  }
+  
+  /* Dark mode logo inversion */
+  @media (prefers-color-scheme: dark) {
+    img.logo-img { 
+      filter: invert(1) brightness(1.2) !important;
+      -webkit-filter: invert(1) brightness(1.2) !important;
+    }
   }
 </style>
 <table
@@ -75,24 +83,38 @@ export const generateEmailSignature = (
                 <!-- Logo -->
                 <td
                   class="logo-cell"
-                  style="vertical-align: top; width: 235px"
+                  style="vertical-align: top; width: 235px; padding-right: 15px;"
                 >
+                  <!--[if !mso]><!-->
                   <img
                     class="logo-img"
                     src="${logoSrc}"
                     alt="Obelisk Logo"
+                    width="235"
+                    border="0"
                     style="
                       width: 235px;
                       height: auto;
                       display: block;
                       max-width: 100%;
+                      border: none;
                     "
                   />
+                  <!--<![endif]-->
+                  <!--[if mso]>
+                  <img
+                    src="${logoSrc}"
+                    alt="Obelisk Logo"
+                    width="235"
+                    border="0"
+                    style="width: 235px; height: auto; display: block; border: none;"
+                  />
+                  <![endif]-->
                 </td>
 
                 <!-- Info -->
-                <td class="info-cell" style="vertical-align: top; width: auto; text-align: right">
-                  <div class="info-wrapper" style="display: inline-block; text-align: left">
+                <td class="info-cell" style="vertical-align: top; width: auto;">
+                  <div class="info-wrapper" style="text-align: left">
                   <!-- Name -->
                   <p
                     class="name-text"

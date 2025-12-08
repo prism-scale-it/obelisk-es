@@ -4,13 +4,9 @@ import { COUNTRY_CODES } from "../types";
 
 interface SignaturePreviewProps {
   data: SignatureData;
-  isDarkMode?: boolean;
 }
 
-export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
-  data,
-  isDarkMode = false,
-}) => {
+export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ data }) => {
   const fullName = data.middleName
     ? `${data.firstName} ${data.middleName} ${data.lastName}`
     : `${data.firstName} ${data.lastName}`;
@@ -20,28 +16,9 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
   );
   const fullPhoneNumber = `${countryCodeData?.dialCode} ${data.phoneNumber}`;
 
-  const bgColor = isDarkMode ? "#1a1a1a" : "#ffffff";
-  const textColor = isDarkMode ? "#e5e5e5" : "#000000";
-  const dividerColor = isDarkMode ? "#e5e5e5" : "#000000";
-  const disclaimerTextColor = isDarkMode ? "#a1a1a1" : "#666666";
-  const disclaimerBorderColor = isDarkMode ? "#404040" : "#e0e0e0";
-  const logoSrc = isDarkMode
-    ? "https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/new-assets/logo-darkmode.png"
-    : "https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/logo-fill.png";
-
   return (
-    <div
-      className={`border-2 rounded-lg p-4 ${
-        isDarkMode
-          ? "border-gray-600 bg-gray-900"
-          : "border-gray-300 bg-gray-50"
-      }`}
-    >
-      <table
-        cellPadding="0"
-        cellSpacing="0"
-        style={{ width: "600px", backgroundColor: bgColor }}
-      >
+    <div className="border-2 rounded-lg p-4 border-gray-300 bg-gray-50">
+      <table cellPadding="0" cellSpacing="0" style={{ width: "600px" }}>
         <tbody>
           <tr>
             <td style={{ padding: 0, textAlign: "left" }}>
@@ -50,10 +27,9 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
                 cellSpacing="0"
                 style={{
                   fontFamily: "Arial, Helvetica, sans-serif",
-                  color: textColor,
+                  color: "#000000",
                   lineHeight: 1.3,
                   borderCollapse: "collapse",
-                  backgroundColor: bgColor,
                   width: "600px",
                 }}
               >
@@ -80,7 +56,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
                               }}
                             >
                               <img
-                                src={logoSrc}
+                                src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/Obelisk/email-signature/logo-fill.png"
                                 alt="Obelisk Logo"
                                 style={{
                                   width: "235px",
@@ -123,7 +99,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
                                     margin: "0 0 8px 0",
                                     fontSize: "18px",
                                     fontWeight: 400,
-                                    color: textColor,
+                                    color: "#000000",
                                     lineHeight: 1.3,
                                   }}
                                 >
@@ -134,7 +110,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
                                 <hr
                                   style={{
                                     border: "none",
-                                    borderTop: `1px solid ${dividerColor}`,
+                                    borderTop: "1px solid #000000",
                                     margin: "0 0 8px 0",
                                     width: "263px",
                                   }}
@@ -152,7 +128,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
                                   <a
                                     href={`mailto:${data.email}`}
                                     style={{
-                                      color: textColor,
+                                      color: "#000000",
                                       textDecoration: "none",
                                     }}
                                   >
@@ -162,7 +138,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
                                   <a
                                     href={`tel:${countryCodeData?.dialCode}${data.phoneNumber}`}
                                     style={{
-                                      color: textColor,
+                                      color: "#000000",
                                       textDecoration: "none",
                                     }}
                                   >
@@ -181,7 +157,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
                                   <a
                                     href="https://maps.app.goo.gl/p5wjb2cD8tkoABTV9"
                                     style={{
-                                      color: textColor,
+                                      color: "#000000",
                                       textDecoration: "none",
                                     }}
                                     target="_blank"
@@ -288,7 +264,6 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
                 cellSpacing="0"
                 style={{
                   fontFamily: "Aptos, Arial, Helvetica, sans-serif",
-                  backgroundColor: bgColor,
                   borderCollapse: "collapse",
                   width: "600px",
                 }}
@@ -302,8 +277,8 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
                           padding: "12px 0 0 0",
                           fontSize: "11px",
                           lineHeight: 1.4,
-                          color: disclaimerTextColor,
-                          borderTop: `1px solid ${disclaimerBorderColor}`,
+                          color: "#666666",
+                          borderTop: "1px solid #e0e0e0",
                           textAlign: "justify",
                         }}
                       >
