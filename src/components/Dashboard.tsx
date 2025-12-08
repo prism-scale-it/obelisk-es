@@ -5,10 +5,7 @@ import { TextInput } from "./TextInput";
 import { EmailInput } from "./EmailInput";
 import { PhoneInput } from "./PhoneInput";
 import { SignaturePreview } from "./SignaturePreview";
-import {
-  generateEmailSignature,
-  generateEmailSignatureDark,
-} from "../utils/generateSignature";
+import { generateEmailSignature } from "../utils/generateSignature";
 import {
   validateName,
   validateEmail,
@@ -96,9 +93,7 @@ export const Dashboard: React.FC = () => {
       return;
     }
 
-    const html = isDarkMode
-      ? generateEmailSignatureDark(formData)
-      : generateEmailSignature(formData);
+    const html = generateEmailSignature(formData, isDarkMode);
 
     try {
       // Use Clipboard API to copy as HTML

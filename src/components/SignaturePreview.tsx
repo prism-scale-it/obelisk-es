@@ -243,7 +243,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
                                       </td>
                                       <td style={{ paddingLeft: "8px" }}>
                                         <a
-                                          href="https://www.instagram.com/___obelisk___/"
+                                          href="https://www.instagram.com/bimwithobelisk/"
                                           target="_blank"
                                           rel="noreferrer"
                                         >
@@ -257,7 +257,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({
                                       </td>
                                       <td style={{ paddingLeft: "8px" }}>
                                         <a
-                                          href="https://www.facebook.com/share/1TJoc5JkVF/?mibextid=wwXIfr"
+                                          href="https://www.facebook.com/bimwithobelisk/"
                                           target="_blank"
                                           rel="noreferrer"
                                         >
