@@ -67,7 +67,20 @@ export const generateEmailSignature = (data: SignatureData): string => {
         font-weight: 400 !important;
       }
 
-      /* Mobile Responsive Styles */
+      /* Responsive Styles */
+
+      /* Tablet (MD) - 601px to 800px */
+      @media only screen and (max-width: 800px) {
+        .main-padding {
+          padding: 15px !important;
+        }
+        .logo-img {
+          height: 150px !important;
+          width: auto !important;
+        }
+      }
+
+      /* Mobile (SM) - 481px to 600px */
       @media only screen and (max-width: 600px) {
         .logo-img {
           height: 100px !important;
@@ -86,24 +99,56 @@ export const generateEmailSignature = (data: SignatureData): string => {
         }
         .contact-text {
           font-size: 11px !important;
+          white-space: normal !important; /* Allow wrapping */
         }
         .address-text {
           font-size: 9px !important;
           line-height: 12px !important;
         }
-        .social-icon-linkedin {
-          height: 20px !important;
-          width: auto !important;
-        }
+        .social-icon-linkedin,
         .social-icon-website {
-          height: 16px !important;
+          height: 24px !important; /* Slightly smaller for mobile */
           width: auto !important;
         }
         .main-padding {
           padding: 10px !important;
         }
         .logo-cell-padding {
+          padding-right: 15px !important;
+        }
+      }
+
+      /* Small Mobile (XS) - up to 480px */
+      @media only screen and (max-width: 480px) {
+        .logo-img {
+          height: 80px !important;
+          width: auto !important;
+        }
+        .text-logo-img {
+          height: 12px !important;
+          width: auto !important;
+        }
+        .name-text {
+          font-size: 14px !important;
+        }
+        .title-text {
+          font-size: 12px !important;
+          line-height: 14px !important;
+        }
+        .contact-text {
+          font-size: 10px !important;
+        }
+        .address-text {
+          font-size: 8px !important;
+          line-height: 11px !important;
+        }
+        .logo-cell-padding {
           padding-right: 10px !important;
+        }
+        .social-icon-linkedin,
+        .social-icon-website {
+          height: 20px !important;
+          width: auto !important;
         }
       }
     </style>
