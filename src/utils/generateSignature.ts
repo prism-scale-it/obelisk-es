@@ -66,6 +66,46 @@ export const generateEmailSignature = (data: SignatureData): string => {
         letter-spacing: -0.3px;
         font-weight: 400 !important;
       }
+
+      /* Mobile Responsive Styles */
+      @media only screen and (max-width: 600px) {
+        .logo-img {
+          height: 100px !important;
+          width: auto !important;
+        }
+        .text-logo-img {
+          height: 14px !important;
+          width: auto !important;
+        }
+        .name-text {
+          font-size: 16px !important;
+        }
+        .title-text {
+          font-size: 13px !important;
+          line-height: 16px !important;
+        }
+        .contact-text {
+          font-size: 11px !important;
+        }
+        .address-text {
+          font-size: 9px !important;
+          line-height: 12px !important;
+        }
+        .social-icon-linkedin {
+          height: 20px !important;
+          width: auto !important;
+        }
+        .social-icon-website {
+          height: 16px !important;
+          width: auto !important;
+        }
+        .main-padding {
+          padding: 10px !important;
+        }
+        .logo-cell-padding {
+          padding-right: 10px !important;
+        }
+      }
     </style>
 
     <!-- Custom fonts removed -->
@@ -94,7 +134,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
       style="max-width: 800px; width: 100%; font-family: Helvetica, sans-serif"
     >
       <tr>
-        <td style="padding: 20px">
+        <td style="padding: 20px" class="main-padding">
           <table
             role="presentation"
             border="0"
@@ -107,6 +147,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
               <td
                 valign="middle"
                 width="1%"
+                class="logo-cell-padding"
                 style="
                   padding-right: 20px;
                   white-space: nowrap;
@@ -117,6 +158,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                   src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/unmanned-es/unmanned-logo.png"
                   alt="Unmanned X Logo"
                   height="200"
+                  class="logo-img"
                 />
               </td>
 
@@ -136,6 +178,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                         src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/unmanned-es/unmanned-text.png"
                         alt="UNMANNED"
                         height="18"
+                        class="text-logo-img"
                       />
                     </td>
                   </tr>
@@ -143,6 +186,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                   <!-- Name (Goldman + Arial fallback) -->
                   <tr>
                     <td
+                      class="name-text"
                       style="
                         font-family: Arial, Helvetica, sans-serif;
                         font-size: 24px;
@@ -158,6 +202,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                   <!-- Title -->
                   <tr>
                     <td
+                      class="title-text"
                       style="
                         font-family:
                           &quot;IBM Plex Sans&quot;, Helvetica, sans-serif;
@@ -193,12 +238,14 @@ export const generateEmailSignature = (data: SignatureData): string => {
                   <!-- Contact -->
                   <tr>
                     <td
+                      class="contact-text"
                       style="
                         font-family:
                           &quot;IBM Plex Sans&quot;, Helvetica, sans-serif;
                         font-size: 16px;
                         color: #023560;
                         padding-bottom: 8px;
+                        white-space: nowrap;
                       "
                     >
                       <a
@@ -218,6 +265,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                   <!-- Address -->
                   <tr>
                     <td
+                      class="address-text"
                       style="
                         font-family:
                           &quot;IBM Plex Sans&quot;, Helvetica, sans-serif;
@@ -255,6 +303,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                               <img
                                 src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/unmanned-es/linkedin.png"
                                 height="24"
+                                class="social-icon-linkedin"
                                 style="display: block; height: 24px; border: 0"
                               />
                             </a>
@@ -265,14 +314,14 @@ export const generateEmailSignature = (data: SignatureData): string => {
                               vertical-align: middle;
                               line-height: 0;
                               font-size: 0;
-                              padding-top: 3px;
                             "
                           >
                             <a href="https://www.unmannd.com">
                               <img
                                 src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/unmanned-es/website.png"
-                                height="20"
-                                style="display: block; height: 20px; border: 0"
+                                height="24"
+                                class="social-icon-website"
+                                style="display: block; height: 24px; border: 0"
                               />
                             </a>
                           </td>
