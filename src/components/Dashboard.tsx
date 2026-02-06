@@ -15,17 +15,18 @@ import {
 
 export const Dashboard: React.FC = () => {
   const [formData, setFormData] = useState<SignatureData>({
-    firstName: "",
-    lastName: "",
+    firstName: "Yeshwanth",
+    lastName: "Reddy",
     middleName: "",
-    position: "",
-    email: "",
+    position: "Co-founder & CEO",
+    email: "yeshwanth@unmannd.com",
     countryCode: "AU",
-    phoneNumber: "",
-    address: "",
+    phoneNumber: "466438868",
+    address:
+      "57, Hi-tech, Defence and Aerospace Park (IT Sector), Arebinnamangala, Jala Hobli, Yelahanka, Bengaluru - 562149",
   });
 
-  const [emailLocalPart, setEmailLocalPart] = useState("");
+  const [emailLocalPart, setEmailLocalPart] = useState("yeshwanth");
   const [errors, setErrors] = useState<
     Partial<Record<keyof SignatureData, string>>
   >({});
@@ -36,7 +37,7 @@ export const Dashboard: React.FC = () => {
     setEmailLocalPart(localPart);
     setFormData((prev) => ({
       ...prev,
-      email: `${localPart}@obelisk.au`,
+      email: `${localPart}@unmannd.com`,
     }));
   };
 
@@ -57,7 +58,7 @@ export const Dashboard: React.FC = () => {
     }
 
     if (!validateEmail(formData.email)) {
-      newErrors.email = "Valid email with @obelisk.au domain is required";
+      newErrors.email = "Valid email with @unmannd.com domain is required";
     }
 
     if (!validatePhoneNumber(formData.phoneNumber, formData.countryCode)) {
@@ -65,8 +66,8 @@ export const Dashboard: React.FC = () => {
       newErrors.phoneNumber = `Phone number must be ${requiredDigits} digits`;
     }
 
-    if (!validateAddress(formData.address, 100)) {
-      newErrors.address = "Address is required (max 100 characters)";
+    if (!validateAddress(formData.address, 150)) {
+      newErrors.address = "Address is required (max 150 characters)";
     }
 
     setErrors(newErrors);
@@ -81,7 +82,7 @@ export const Dashboard: React.FC = () => {
       validateName(formData.position) &&
       validateEmail(formData.email) &&
       validatePhoneNumber(formData.phoneNumber, formData.countryCode) &&
-      validateAddress(formData.address, 100)
+      validateAddress(formData.address, 150)
     );
   };
 
@@ -112,7 +113,7 @@ export const Dashboard: React.FC = () => {
         setCopySuccess(true);
         setTimeout(() => setCopySuccess(false), 3000);
         alert(
-          "Signature copied! Note: You may need to paste it as HTML in your email client."
+          "Signature copied! Note: You may need to paste it as HTML in your email client.",
         );
       } catch {
         alert("Failed to copy to clipboard. Please try again.");
@@ -139,7 +140,7 @@ export const Dashboard: React.FC = () => {
               PrismScale Email Signature Generator
             </h1>
             <p className="text-sm md:text-base text-gray-600">
-              Custom Email signature generator for Obelisk
+              Custom Email signature generator for Unmanned
             </p>
           </div>
         </div>
@@ -227,16 +228,16 @@ export const Dashboard: React.FC = () => {
               label="Address"
               value={formData.address}
               onChange={(value) => {
-                if (value.length <= 100) {
+                if (value.length <= 150) {
                   setFormData((prev) => ({ ...prev, address: value }));
                 }
               }}
               error={errors.address}
               required
-              placeholder="204 Vipul Plaza, Sector 54 Gurugram - 122002"
+              placeholder="57, Hi-tech, Defence and Aerospace Park (IT Sector), Arebinnamangala, Jala Hobli, Yelahanka, Bengaluru - 562149"
             />
             <p className="text-xs text-gray-500 -mt-3 mb-4 text-right">
-              {formData.address.length}/100
+              {formData.address.length}/150
             </p>
 
             <button
@@ -246,8 +247,8 @@ export const Dashboard: React.FC = () => {
                 copySuccess
                   ? "bg-green-500 hover:bg-green-600"
                   : isFormValid()
-                  ? "bg-blue-600 hover:bg-blue-700"
-                  : "bg-gray-400 cursor-not-allowed"
+                    ? "bg-blue-600 hover:bg-blue-700"
+                    : "bg-gray-400 cursor-not-allowed"
               }`}
             >
               {copySuccess ? "✓ Copied!" : "Copy Signature"}

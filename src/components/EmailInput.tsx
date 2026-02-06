@@ -38,8 +38,8 @@ export const EmailInput: React.FC<EmailInputProps> = ({
             error
               ? "border-red-500"
               : isDarkMode
-              ? "border-gray-600 bg-gray-700 text-white"
-              : "border-gray-300 bg-white"
+                ? "border-gray-600 bg-gray-700 text-white"
+                : "border-gray-300 bg-white"
           }`}
         />
         <span
@@ -49,7 +49,7 @@ export const EmailInput: React.FC<EmailInputProps> = ({
               : "bg-gray-100 border-gray-300 text-gray-700"
           }`}
         >
-          @obelisk.au
+          @unmannd.com
         </span>
       </div>
       {error && <p className="text-red-500 text-xs mt-1">{error}</p>}

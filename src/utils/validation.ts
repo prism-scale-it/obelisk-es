@@ -1,11 +1,11 @@
 export const validateEmail = (email: string): boolean => {
-  const emailRegex = /^[^\s@]+@obelisk\.au$/;
+  const emailRegex = /^[^\s@]+@unmannd\.com$/;
   return emailRegex.test(email);
 };
 
 export const validatePhoneNumber = (
   phone: string,
-  countryCode: "AU" | "IN"
+  countryCode: "AU" | "IN",
 ): boolean => {
   // Remove all spaces and special characters except +
   const cleanPhone = phone.replace(/[\s\-()]/g, "");
@@ -21,7 +21,7 @@ export const validatePhoneNumber = (
 
 export const validateAddress = (
   address: string,
-  maxLength: number = 100
+  maxLength: number = 150,
 ): boolean => {
   return address.length > 0 && address.length <= maxLength;
 };
@@ -32,7 +32,7 @@ export const validateName = (name: string): boolean => {
 
 export const formatPhoneNumber = (
   phone: string,
-  countryCode: "AU" | "IN"
+  countryCode: "AU" | "IN",
 ): string => {
   const cleanPhone = phone.replace(/[\s\-()]/g, "");
 
