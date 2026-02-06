@@ -205,7 +205,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                       class="title-text"
                       style="
                         font-family:
-                          &quot;IBM Plex Sans&quot;, Helvetica, sans-serif;
+                          Arial, Helvetica, sans-serif;
                         font-size: 16px;
                         line-height: 20px;
                         color: #023560;
@@ -241,7 +241,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                       class="contact-text"
                       style="
                         font-family:
-                          &quot;IBM Plex Sans&quot;, Helvetica, sans-serif;
+                          Arial, Helvetica, sans-serif;
                         font-size: 16px;
                         color: #023560;
                         padding-bottom: 8px;
@@ -268,7 +268,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                       class="address-text"
                       style="
                         font-family:
-                          &quot;IBM Plex Sans&quot;, Helvetica, sans-serif;
+                          Arial, Helvetica, sans-serif;
                         font-size: 12px;
                         color: #023560;
                         line-height: 16px;
@@ -304,7 +304,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                                 src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/unmanned-es/linkedin.png"
                                 height="24"
                                 class="social-icon-linkedin"
-                                style="display: block; height: 24px; border: 0"
+                                style="display: block; height: 32px; border: 0"
                               />
                             </a>
                           </td>
@@ -321,7 +321,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                                 src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/unmanned-es/website.png"
                                 height="24"
                                 class="social-icon-website"
-                                style="display: block; height: 24px; border: 0"
+                                style="display: block; height: 32px; border: 0"
                               />
                             </a>
                           </td>
