@@ -272,7 +272,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                         font-size: 12px;
                         color: #023560;
                         line-height: 16px;
-                        padding-bottom: 14px;
+                        padding-bottom: 8px;
                       "
                     >
                       ${data.address}
