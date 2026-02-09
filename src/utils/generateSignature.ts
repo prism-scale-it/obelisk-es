@@ -74,16 +74,12 @@ export const generateEmailSignature = (data: SignatureData): string => {
         .main-padding {
           padding: 15px !important;
         }
-        .logo-img {
-          height: 150px !important;
-          width: auto !important;
-        }
       }
 
       /* Mobile (SM) - 481px to 600px */
       @media only screen and (max-width: 600px) {
         .logo-img {
-          height: 100px !important;
+          height: 240px !important;
           width: auto !important;
         }
         .text-logo-img {
@@ -121,7 +117,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
       /* Small Mobile (XS) - up to 480px */
       @media only screen and (max-width: 480px) {
         .logo-img {
-          height: 80px !important;
+          height: 240px !important;
           width: auto !important;
         }
         .text-logo-img {
@@ -202,8 +198,9 @@ export const generateEmailSignature = (data: SignatureData): string => {
                 <img
                   src="https://prismscales3.s3.ap-southeast-1.amazonaws.com/unmanned-es/unmanned-logo.png"
                   alt="Unmanned X Logo"
-                  height="200"
+                  height="190"
                   class="logo-img"
+                  style="display: block; height: 190px; width: auto"
                 />
               </td>
 
@@ -249,12 +246,10 @@ export const generateEmailSignature = (data: SignatureData): string => {
                     <td
                       class="title-text"
                       style="
-                        font-family:
-                          Arial, Helvetica, sans-serif;
+                        font-family: Arial, Helvetica, sans-serif;
                         font-size: 16px;
                         line-height: 20px;
                         color: #023560;
-                        padding-bottom: 12px;
                       "
                     >
                       ${data.position}
@@ -285,8 +280,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                     <td
                       class="contact-text"
                       style="
-                        font-family:
-                          Arial, Helvetica, sans-serif;
+                        font-family: Arial, Helvetica, sans-serif;
                         font-size: 16px;
                         color: #023560;
                         padding-bottom: 8px;
@@ -312,8 +306,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                     <td
                       class="address-text"
                       style="
-                        font-family:
-                          Arial, Helvetica, sans-serif;
+                        font-family: Arial, Helvetica, sans-serif;
                         font-size: 12px;
                         color: #023560;
                         line-height: 16px;
@@ -326,7 +319,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
 
                   <!-- Social -->
                   <tr>
-                    <td style="padding-bottom: 14px">
+                    <td>
                       <table
                         role="presentation"
                         border="0"
@@ -387,6 +380,7 @@ export const generateEmailSignature = (data: SignatureData): string => {
                   font-size: 10px;
                   line-height: 14px;
                   color: #888888;
+                  padding-top: 12px;
                 "
               >
                 Confidentiality Notice: This email and any attachments are
